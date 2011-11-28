@@ -1,27 +1,49 @@
+" Pathogen {{{
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+silent! call pathogen#infect()
+silent! call pathogen#helptags()
+
+" }}}
+
 set nocompatible
-set tabstop=4
-set shiftwidth=4
-set backspace=2
-set number
-set ruler
-set background=light
+
+syntax on
+filetype plugin indent on
+
 set autoindent
 set cindent
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+set backspace=2
+
+set number
+set ruler
+
+set background=light
+
 set nobackup
+
 set noincsearch
 set showmatch
-set laststatus=2
 set hlsearch
-set statusline=%F\ %y%m%=\ %{Filenc()}[%{&ff}]\ %c%V\ %l\,%L\ %P
+
+set laststatus=2
+set statusline=%F\ %y%m%=\ %{strlen(&fenc)?'['.&fenc.']':''}[%{&ff}]\ %c%V\ %l\,%L\ %P
+
+set tabline=%!ShortTabLine()
 
 set wildmenu
 set wildmode=list:longest,full
 
 set tags=tags;/
 
-syntax on
-filetype plugin on
-filetype indent on
+if has("folding")
+	set foldenable
+	set foldmethod=marker
+endif
 
 " Current directory follows the file being edited, unless it's a remote file
 if exists(":lcd")
@@ -33,35 +55,21 @@ endif
 " Some settings for :TOhtml
 if exists(":TOhtml")
 	let g:html_use_css = 1
-	let g:html_use_xhtml = 1
 	let g:html_number_lines = 1
 endif
 
-" Folding
-if version >= 600
-	set foldenable
-	set foldmethod=marker
-endif
-
-function Filenc()
-	if &fileencoding != ""
-		return "[" . &fileencoding . "]"
-	else
-		return ""
-	endif
-endfunction
-
+" I prefer 16 color mode in the terminal
 if $TERM == "rxvt-unicode"
 	set t_Co=16
 endif
 
+" Backslash is a pain to reach on Swedish layouts
 let mapleader = ","
+let localmapleader = "\\"
 
-let g:erlangFold = 0
-let g:erlangHighlightBif = 1
 let c_C99 = 1
 
-let g:slimv_client = 'python ~/.vim/ftplugin/slimv.py -r "urxvt -T Slimv -e @p @s -l clisp -s"'
+" Helper functions {{{
 
 function ShortTabLine()
 	let ret = ''
@@ -93,20 +101,5 @@ function ShortTabLine()
 	return ret
 endfunction
 
-set tabline=%!ShortTabLine()
-
-" Templates
-function! LoadTemplate()
-	silent! 0r ~/.vim/skel/tmpl.%:e
-
-	" Highlight %VAR% placeholders with the Todo colour group
-	syn match Todo "%\u\+%" containedIn=ALL
-endfunction
-
-autocmd! BufNewFile * call LoadTemplate()
-
-" Jump between %VAR% placeholders in Normal mode with <Ctrl-p>
-nnoremap <c-p> /%\u.\{-1,}%<cr>c/%/e<cr>
-" Jump between %VAR% placeholders in Insert mode with <Ctrl-p>
-inoremap <c-p> <ESC>/%\u.\{-1,}%<cr>c/%/e<cr>
+" }}}
 

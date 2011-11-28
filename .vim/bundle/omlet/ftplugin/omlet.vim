@@ -405,4 +405,3 @@ endfun
 
 map ,t :call OCamlPrintType("normal")<RETURN>
 vmap ,t :call OCamlPrintType("visual")<RETURN>
-
