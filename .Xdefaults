@@ -1,126 +1,75 @@
-XTerm*color0:				#212121
-XTerm*color1:				#bf7276
-XTerm*color2:				#86af80
-XTerm*color3:				#968a38
-XTerm*color4:				#3673b5
-XTerm*color5:				#9a70b2
-XTerm*color6:				#7abecc
-XTerm*color7:				#dbdbdb
-XTerm*color8:				#6692af
-XTerm*color9:				#e5505f
-XTerm*color10:				#87bc87
-XTerm*color11:				#e0d95c
-XTerm*color12:				#1b85d6
-XTerm*color13:				#ad73ba
-XTerm*color14:				#338eaa
-XTerm*color15:				#f4f4f4
-XTerm*colorBD:				#ffffff
-XTerm*foreground:			#bebebe
-XTerm*background:			#212121
-XTerm*font:					neep-alt-10
-XTerm*boldMode:				false
-XTerm*scrollBar:			false
-XTerm*colorMode:			on
-XTerm*dynamicColors:		on
-XTerm*highlightSelection:	true
-XTerm*eightBitInput:		false
-XTerm*metaSendsEscape:		true
-XTerm*oldXtermFKeys:		true
-XTerm*loginShell:			true
+! Macros {{{
 
-UXTerm*color0:				#212121
-UXTerm*color1:				#bf7276
-UXTerm*color2:				#86af80
-UXTerm*color3:				#968a38
-UXTerm*color4:				#3673b5
-UXTerm*color5:				#9a70b2
-UXTerm*color6:				#7abecc
-UXTerm*color7:				#dbdbdb
-UXTerm*color8:				#6692af
-UXTerm*color9:				#e5505f
-UXTerm*color10:				#87bc87
-UXTerm*color11:				#e0d95c
-UXTerm*color12:				#1b85d6
-UXTerm*color13:				#ad73ba
-UXTerm*color14:				#338eaa
-UXTerm*color15:				#f4f4f4
-UXTerm*colorBD:				#ffffff
-UXTerm*foreground:			#bebebe
-UXTerm*background:			#212121
-UXTerm*boldMode:				false
-UXTerm*scrollBar:			false
-UXTerm*colorMode:			on
-UXTerm*dynamicColors:		on
-UXTerm*highlightSelection:	true
-UXTerm*eightBitInput:		false
-UXTerm*metaSendsEscape:		true
-UXTerm*oldXtermFKeys:		true
-UXTerm*loginShell:			true
+#define ISO_ENCODING        iso8859-1
+#define UTF8_ENCODING       iso10646-1
 
-rxvt*color0:             #212121
-rxvt*color1:             #bf7276
-rxvt*color2:             #86af80
-rxvt*color3:             #968a38
-rxvt*color4:             #3673b5
-rxvt*color5:             #9a70b2
-rxvt*color6:             #7abecc
-rxvt*color7:             #dbdbdb
-rxvt*color8:             #6692af
-rxvt*color9:             #e5505f
-rxvt*color10:            #87bc87
-rxvt*color11:            #e0d95c
-rxvt*color12:            #1b85d6
-rxvt*color13:            #ad73ba
-rxvt*color14:            #338eaa
-rxvt*color15:            #f4f4f4
-rxvt*colorBD:            #ffffff
-rxvt*foreground:         #bebebe
-rxvt*background:         #212121
-rxvt*font:               neep-alt-10
-rxvt*boldMode:           false
-rxvt*scrollBar:          false
-rxvt*colorMode:          on
-rxvt*dynamicColors:      on
-rxvt*highlightSelection: true
-rxvt*eightBitInput:      false
-rxvt*metaSendsEscape:    true
-rxvt*oldXtermFKeys:      true
-rxvt*loginShell:         true
-rxvt*termName:           rxvt
+#define TERMINAL_FONT      -*-fixed-medium-*-*-*-12-*-*-*-*-*-*
+#define TERMINAL_BOLD_FONT -*-fixed-bold-*-*-*-12-*-*-*-*-*-*
 
-URxvt.color0:				#212121
-URxvt.color1:				#bf7276
-URxvt.color2:				#86af80
-URxvt.color3:				#968a38
-URxvt.color4:				#3673b5
-URxvt.color5:				#9a70b2
-URxvt.color6:				#7abecc
-URxvt.color7:				#dbdbdb
-URxvt.color8:				#6692af
-URxvt.color9:				#e5505f
-URxvt.color10:				#87bc87
-URxvt.color11:				#e0d95c
-URxvt.color12:				#1b85d6
-URxvt.color13:				#ad73ba
-URxvt.color14:				#338eaa
-URxvt.color15:				#f4f4f4
-URxvt.colorBD:				#ffffff
-URxvt.foreground:			#bebebe
-URxvt.background:			#212121
-URxvt.font:               -jmk-neep alt-medium-r-semicondensed--13-*-*-*-c-*-iso8859-1,-misc-fixed-medium-r-normal--13-*-*-*-c-*-iso10646-1
-URxvt.boldFont:           -jmk-neep alt-bold-r-semicondensed--13-*-*-*-c-*-iso8859-1,-misc-fixed-medium-r-normal--13-*-*-*-c-*-iso10646-1
-URxvt.scrollBar:				false
-URxvt.colorMode:				on
-URxvt.dynamicColors:		 	on
-URxvt.highlightSelection:	true
-URxvt.eightBitInput:			false
-URxvt.metaSendsEscape:		true
-URxvt.oldXtermFKeys:			true
-URxvt.loginShell:			true
-URxvt.termName:				rxvt-unicode
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: google-chrome
-URxvt.matcher.button: 1
+!#define TERMINAL_FONT       -xos4-terminus-medium-*-*-*-14-*-*-*-*-*
+!#define TERMINAL_BOLD_FONT  -xos4-terminus-bold-*-*-*-14-*-*-*-*-*
+
+!#define TERMINAL_FONT       -jmk-neep alt-medium-r-semicondensed--13-*-*-*-c-*
+!#define TERMINAL_BOLD_FONT  -jmk-neep alt-bold-r-semicondensed--13-*-*-*-c-*
+
+!}}}
+
+! Terminal defaults {{{
+
+*color0:                    #212121
+*color1:                    #bf7276
+*color2:                    #86af80
+*color3:                    #968a38
+*color4:                    #3673b5
+*color5:                    #9a70b2
+*color6:                    #7abecc
+*color7:                    #dbdbdb
+*color8:                    #6692af
+*color9:                    #e5505f
+*color10:                   #87bc87
+*color11:                   #e0d95c
+*color12:                   #1b85d6
+*color13:                   #ad73ba
+*color14:                   #338eaa
+*color15:                   #f4f4f4
+*colorBD:                   #ffffff
+*foreground:                #bebebe
+*background:                #212121
+
+*boldMode:                  false
+*scrollBar:                 false
+*colorMode:                 on
+*dynamicColors:             on
+*highlightSelection:        true
+*eightBitInput:             false
+*metaSendsEscape:           true
+*oldXtermFKeys:             true
+*loginShell:                true
+
+*font:                      TERMINAL_FONT-ISO_ENCODING
+*boldFont:                  TERMINAL_BOLD_FONT-ISO_ENCODING
+
+! }}}
+
+! uxterm {{{
+
+UXTerm*font:                TERMINAL_FONT-UTF8_ENCODING
+UXTerm*boldFont:            TERMINAL_BOLD_FONT-UTF8_ENCODING
+
+! }}}
+
+! urxvt {{{
+
+URxvt.font:                 TERMINAL_FONT-ISO_ENCODING,TERMINAL_FONT-UTF8_ENCODING
+URxvt.boldFont:             TERMINAL_BOLD_FONT-ISO_ENCODING,TERMINAL_BOLD_FONT-UTF8_ENCODING
+
+URxvt.perl-ext-common:      default,matcher,url-select
+URxvt.perl-lib:             .urxvt
+URxvt.keysym.C-u:           perl:url-select:select_next
+URxvt.urlLauncher:          google-chrome
+URxvt.matcher.button:       1
+
+! }}}
 
 XLock.mode: blank
 
