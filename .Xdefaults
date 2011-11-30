@@ -12,7 +12,7 @@
 !#define TERMINAL_FONT       -jmk-neep alt-medium-r-semicondensed--13-*-*-*-c-*
 !#define TERMINAL_BOLD_FONT  -jmk-neep alt-bold-r-semicondensed--13-*-*-*-c-*
 
-!}}}
+! }}}
 
 ! Terminal defaults {{{
 
