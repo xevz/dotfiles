@@ -1,24 +1,24 @@
 [submodule ".vim/bundle/slimv.vim"]
 	path = .vim/bundle/slimv.vim
-	url = https://github.com/vim-scripts/slimv.vim.git
+	url = git://github.com/vim-scripts/slimv.vim.git
 [submodule ".vim/bundle/vimerl"]
 	path = .vim/bundle/vimerl
-	url = https://github.com/jimenezrick/vimerl.git
+	url = git://github.com/jimenezrick/vimerl.git
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen
 [submodule ".vim/bundle/vim-rails"]
 	path = .vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
+	url = git://github.com/tpope/vim-rails.git
 [submodule ".vim/bundle/vim-sshauthkeys"]
 	path = .vim/bundle/vim-sshauthkeys
-	url = https://github.com/xevz/vim-sshauthkeys.git
+	url = git://github.com/xevz/vim-sshauthkeys.git
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
+	url = git://github.com/vim-ruby/vim-ruby.git
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+	url = git://github.com/kien/ctrlp.vim.git
