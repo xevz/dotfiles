@@ -67,7 +67,14 @@ endif
 let mapleader = ","
 let localmapleader = "\\"
 
+" Language specific settings {{{
 let c_C99 = 1
+
+augroup lang_Ruby
+	autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2
+augroup END
+
+" }}}
 
 " Helper functions {{{
 
