@@ -1,12 +1,20 @@
-" Pathogen {{{
-
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-silent! call pathogen#infect()
-silent! call pathogen#helptags()
-
-" }}}
-
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'vim-scripts/slimv.vim'
+Bundle 'vim-scripts/omlet.vim'
+
+Bundle 'jimenezrick/vimerl'
+Bundle 'tpop/vim-fugitive'
+Bundle 'tpop/vim-rails'
+Bundle 'xevz/vim-sshauthkeys'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'kien/ctrlp.vim'
 
 syntax on
 filetype plugin indent on
