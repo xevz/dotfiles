@@ -86,7 +86,7 @@ augroup END
 
 " Helper functions {{{
 
-function ShortTabLine()
+function! ShortTabLine()
 	let ret = ''
 
 	for i in range(tabpagenr('$'))
