@@ -16,38 +16,43 @@
 
 ! Terminal defaults {{{
 
-*color0:                    #212121
-*color1:                    #bf7276
-*color2:                    #86af80
-*color3:                    #968a38
-*color4:                    #3673b5
-*color5:                    #9a70b2
-*color6:                    #7abecc
-*color7:                    #dbdbdb
-*color8:                    #6692af
-*color9:                    #e5505f
-*color10:                   #87bc87
-*color11:                   #e0d95c
-*color12:                   #1b85d6
-*color13:                   #ad73ba
-*color14:                   #338eaa
-*color15:                   #f4f4f4
-*colorBD:                   #ffffff
-*foreground:                #bebebe
-*background:                #212121
+*.color0:                    #212121
+*.color1:                    #bf7276
+*.color2:                    #86af80
+*.color3:                    #968a38
+*.color4:                    #3673b5
+*.color5:                    #9a70b2
+*.color6:                    #7abecc
+*.color7:                    #dbdbdb
+*.color8:                    #6692af
+*.color9:                    #e5505f
+*.color10:                   #87bc87
+*.color11:                   #e0d95c
+*.color12:                   #1b85d6
+*.color13:                   #ad73ba
+*.color14:                   #338eaa
+*.color15:                   #f4f4f4
+*.colorBD:                   #ffffff
+*.foreground:                #bebebe
+*.background:                #212121
 
-*boldMode:                  false
-*scrollBar:                 false
-*colorMode:                 on
-*dynamicColors:             on
-*highlightSelection:        true
-*eightBitInput:             false
-*metaSendsEscape:           true
-*oldXtermFKeys:             true
-*loginShell:                true
+*.boldMode:                  false
+*.scrollBar:                 false
+*.colorMode:                 on
+*.dynamicColors:             on
+*.highlightSelection:        true
+*.eightBitInput:             false
+*.metaSendsEscape:           true
+*.oldXtermFKeys:             true
+*.loginShell:                true
 
-*font:                      TERMINAL_FONT-ISO_ENCODING
-*boldFont:                  TERMINAL_BOLD_FONT-ISO_ENCODING
+*.font:                      TERMINAL_FONT-ISO_ENCODING
+*.boldFont:                  TERMINAL_BOLD_FONT-ISO_ENCODING
+
+! }}}
+
+! XTerm {{{
+
 
 ! }}}
 
