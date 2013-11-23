@@ -15,6 +15,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'xevz/vim-sshauthkeys'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kien/ctrlp.vim'
+Bundle 'derekwyatt/vim-scala'
 
 syntax on
 filetype plugin indent on
@@ -67,7 +68,12 @@ if exists(":TOhtml")
 endif
 
 " I prefer 16 color mode in the terminal
-if $TERM == "rxvt-unicode"
+if &t_Co == 256
+    let g:rehash256 = 1
+    let g:molokai_original = 1
+    set background=dark
+    colorscheme molokai
+elseif &t_Co > 16
 	set t_Co=16
 endif
 
