@@ -53,6 +53,7 @@
 
 ! XTerm {{{
 
+xterm*faceName:              xft:Source Code Pro:medium:size=10
 
 ! }}}
 
@@ -65,8 +66,9 @@ UXTerm*boldFont:             TERMINAL_BOLD_FONT-UTF8_ENCODING
 
 ! urxvt {{{
 
-URxvt.font:                 TERMINAL_FONT-ISO_ENCODING,TERMINAL_FONT-UTF8_ENCODING
-URxvt.boldFont:             TERMINAL_BOLD_FONT-ISO_ENCODING,TERMINAL_BOLD_FONT-UTF8_ENCODING
+URxvt.font:                  xft:Source Code Pro:medium:size=10
+URxvt.boldFont:              xft:Source Code Pro:bold:size=10
+URxvt.letterSpace:           -1.5
 
 URxvt.perl-ext-common:      default,matcher,url-select
 URxvt.perl-lib:             .urxvt
@@ -75,6 +77,14 @@ URxvt.urlLauncher:          google-chrome
 URxvt.matcher.button:       1
 
 ! }}}
+
+Xft.autohint:               0
+Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintfull
+Xft.hinting:                1
+Xft.antialias:              1
+Xft.rgba:                   rgb
+Xft.dpi:                    96
 
 XLock.mode: blank
 
