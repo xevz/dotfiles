@@ -58,8 +58,8 @@
 
 ! uxterm {{{
 
-UXTerm*font:                TERMINAL_FONT-UTF8_ENCODING
-UXTerm*boldFont:            TERMINAL_BOLD_FONT-UTF8_ENCODING
+UXTerm*font:                 TERMINAL_FONT-UTF8_ENCODING
+UXTerm*boldFont:             TERMINAL_BOLD_FONT-UTF8_ENCODING
 
 ! }}}
 
