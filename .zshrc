@@ -28,20 +28,19 @@ function _zshrc_ssh_wrapper() {
 		pgrep ssh-agent | grep -q $SSH_AGENT_PID || _zshrc_ssh_agent_start
 	else
 		_zshrc_ssh_agent_start
-	fi 
+	fi
 
-	case $cmd in
-		ssh|scp|sftp) (unfunction $cmd; $cmd $@);;
-	esac
+    (unfunction $cmd; $cmd $@)
 }
 
 function ssh  { _zshrc_ssh_wrapper $0 $@ }
 function scp  { _zshrc_ssh_wrapper $0 $@ }
 function sftp { _zshrc_ssh_wrapper $0 $@ }
+function mosh { _zshrc_ssh_wrapper $0 $@ }
 
 #
 # Environment variables
-# 
+#
 
 if autoload colors zsh/terminfo; then
 	if [[ "$terminfo[colors]" -ge 8 ]]; then
