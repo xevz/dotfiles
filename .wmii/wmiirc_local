@@ -1,0 +1,18 @@
+MODKEY=Mod1
+
+WMII_NORMCOLORS='#e0e0e0 #0a0a0a #202020'
+WMII_FOCUSCOLORS='#ffffff #285577 #4c7899'
+
+WMII_BACKGROUND='#333333'
+WMII_FONT='-misc-fixed-medium-r-normal--10-*-*-*-c-*-iso10646-1'
+
+WMII_TERM=urxvt
+
+wmiir write /colrules <<!
+    /.*/ -> 50+50
+!
+
+status() {
+    echo -n ''
+}
+
