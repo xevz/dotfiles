@@ -1,0 +1,32 @@
+#!/bin/bash
+
+monitor=$1
+output_name=$(xrandr | awk '$2 == "connected" { print $1 }' | sed -n "$(($monitor + 1))p")
+
+if pgrep awesome &>/dev/null; then
+    nmonitor=$(($monitor + 1))
+    echo "awful.screen.focus(${nmonitor})" | awesome-client
+elif pgrep i3 &>/dev/null; then
+    nmonitor=$(($monitor + 1))
+    case $nmonitor in
+        1)
+            i3-msg mode default
+            i3-msg focus output DFP1
+            ;;
+        2)
+            i3-msg mode monitor$nmonitor
+            i3-msg focus output DFP5
+            ;;
+        3)
+            i3-msg mode monitor$nmonitor
+            i3-msg focus output DFP10
+            ;;
+    esac
+else
+    POSITION=$(xwarppointer get)
+    DISPLAY=:0.$monitor swarp $POSITION
+fi
+
+stylus_name=$(xinput list --name-only | grep 'stylus')
+xsetwacom --set "$stylus_name" MapToOutput "$output_name"
+
