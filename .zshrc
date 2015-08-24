@@ -139,31 +139,9 @@ case "$(uname)" in
 		;;
 esac
 
-#
-# Host based configuration
-#
-
-case "$(hostname | sed 's/\([^\.]*\)\..*/\1/')" in
-	xevz)
-		#
-		# Alias
-		#
-
-		#
-		# Hashes
-		#
-
-		;;
-
-	laptop)
-		#
-		# Hashes
-		#
-
-		;;
-esac
-
 if [ -r "$SSH_ENV" ]; then
 	source "$SSH_ENV"
 fi
+
+[ -r "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 

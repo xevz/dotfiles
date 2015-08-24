@@ -14,7 +14,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'xevz/vim-sshauthkeys'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'derekwyatt/vim-scala'
 
 syntax on
