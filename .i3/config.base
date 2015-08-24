@@ -10,6 +10,10 @@ set $altgr Mod5
 
 default_orientation vertical
 
+# Exec
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec_always ~/.i3/i3workspace.pl
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -27,85 +31,161 @@ floating_modifier $mod
 
 for_window [class="MPlayer|mpv"] floating enable
 
+workspace 1  output DVI-I-1
+workspace 2  output DVI-I-1
+workspace 3  output DVI-I-1
+workspace 3  output DVI-I-1
+workspace 4  output DVI-I-1
+workspace 5  output DVI-I-1
+workspace 6  output DVI-I-1
+workspace 7  output DVI-I-1
+workspace 8  output DVI-I-1
+workspace 9  output DVI-I-1
+workspace 10 output DVI-I-1
+
+workspace 11 output DP-1
+workspace 12 output DP-1
+workspace 13 output DP-1
+workspace 13 output DP-1
+workspace 14 output DP-1
+workspace 15 output DP-1
+workspace 16 output DP-1
+workspace 17 output DP-1
+workspace 18 output DP-1
+workspace 19 output DP-1
+workspace 20 output DP-1
+
+workspace 21 output DVI-D-0
+workspace 22 output DVI-D-0
+workspace 23 output DVI-D-0
+workspace 23 output DVI-D-0
+workspace 24 output DVI-D-0
+workspace 25 output DVI-D-0
+workspace 26 output DVI-D-0
+workspace 27 output DVI-D-0
+workspace 28 output DVI-D-0
+workspace 29 output DVI-D-0
+workspace 30 output DVI-D-0
+
+workspace 31 output HDMI-0
+workspace 32 output HDMI-0
+workspace 33 output HDMI-0
+workspace 33 output HDMI-0
+workspace 34 output HDMI-0
+workspace 35 output HDMI-0
+workspace 36 output HDMI-0
+workspace 37 output HDMI-0
+workspace 38 output HDMI-0
+workspace 39 output HDMI-0
+workspace 40 output HDMI-0
+
 # default_keys
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym Control+1 workspace 1
+bindsym Control+2 workspace 2
+bindsym Control+3 workspace 3
+bindsym Control+4 workspace 4
+bindsym Control+5 workspace 5
+bindsym Control+6 workspace 6
+bindsym Control+7 workspace 7
+bindsym Control+8 workspace 8
+bindsym Control+9 workspace 9
+bindsym Control+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym Control+Shift+1 move container to workspace 1
+bindsym Control+Shift+2 move container to workspace 2
+bindsym Control+Shift+3 move container to workspace 3
+bindsym Control+Shift+4 move container to workspace 4
+bindsym Control+Shift+5 move container to workspace 5
+bindsym Control+Shift+6 move container to workspace 6
+bindsym Control+Shift+7 move container to workspace 7
+bindsym Control+Shift+8 move container to workspace 8
+bindsym Control+Shift+9 move container to workspace 9
+bindsym Control+Shift+0 move container to workspace 10
 
 mode "monitor2" {
     # default_keys
 
-    bindsym $mod+1 workspace 11
-    bindsym $mod+2 workspace 12
-    bindsym $mod+3 workspace 13
-    bindsym $mod+4 workspace 14
-    bindsym $mod+5 workspace 15
-    bindsym $mod+6 workspace 16
-    bindsym $mod+7 workspace 17
-    bindsym $mod+8 workspace 18
-    bindsym $mod+9 workspace 19
-    bindsym $mod+0 workspace 20
+    bindsym Control+1 workspace 11
+    bindsym Control+2 workspace 12
+    bindsym Control+3 workspace 13
+    bindsym Control+4 workspace 14
+    bindsym Control+5 workspace 15
+    bindsym Control+6 workspace 16
+    bindsym Control+7 workspace 17
+    bindsym Control+8 workspace 18
+    bindsym Control+9 workspace 19
+    bindsym Control+0 workspace 20
 
     # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 11
-    bindsym $mod+Shift+2 move container to workspace 12
-    bindsym $mod+Shift+3 move container to workspace 13
-    bindsym $mod+Shift+4 move container to workspace 14
-    bindsym $mod+Shift+5 move container to workspace 15
-    bindsym $mod+Shift+6 move container to workspace 16
-    bindsym $mod+Shift+7 move container to workspace 17
-    bindsym $mod+Shift+8 move container to workspace 18
-    bindsym $mod+Shift+9 move container to workspace 19
-    bindsym $mod+Shift+0 move container to workspace 20
+    bindsym Control+Shift+1 move container to workspace 11
+    bindsym Control+Shift+2 move container to workspace 12
+    bindsym Control+Shift+3 move container to workspace 13
+    bindsym Control+Shift+4 move container to workspace 14
+    bindsym Control+Shift+5 move container to workspace 15
+    bindsym Control+Shift+6 move container to workspace 16
+    bindsym Control+Shift+7 move container to workspace 17
+    bindsym Control+Shift+8 move container to workspace 18
+    bindsym Control+Shift+9 move container to workspace 19
+    bindsym Control+Shift+0 move container to workspace 20
 }
 
 mode "monitor3" {
     # default_keys
 
-    bindsym $mod+1 workspace 21
-    bindsym $mod+2 workspace 22
-    bindsym $mod+3 workspace 23
-    bindsym $mod+4 workspace 24
-    bindsym $mod+5 workspace 25
-    bindsym $mod+6 workspace 26
-    bindsym $mod+7 workspace 27
-    bindsym $mod+8 workspace 28
-    bindsym $mod+9 workspace 29
-    bindsym $mod+0 workspace 30
+    bindsym Control+1 workspace 21
+    bindsym Control+2 workspace 22
+    bindsym Control+3 workspace 23
+    bindsym Control+4 workspace 24
+    bindsym Control+5 workspace 25
+    bindsym Control+6 workspace 26
+    bindsym Control+7 workspace 27
+    bindsym Control+8 workspace 28
+    bindsym Control+9 workspace 29
+    bindsym Control+0 workspace 30
 
     # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 21
-    bindsym $mod+Shift+2 move container to workspace 22
-    bindsym $mod+Shift+3 move container to workspace 23
-    bindsym $mod+Shift+4 move container to workspace 24
-    bindsym $mod+Shift+5 move container to workspace 25
-    bindsym $mod+Shift+6 move container to workspace 26
-    bindsym $mod+Shift+7 move container to workspace 27
-    bindsym $mod+Shift+8 move container to workspace 28
-    bindsym $mod+Shift+9 move container to workspace 29
-    bindsym $mod+Shift+0 move container to workspace 30
+    bindsym Control+Shift+1 move container to workspace 21
+    bindsym Control+Shift+2 move container to workspace 22
+    bindsym Control+Shift+3 move container to workspace 23
+    bindsym Control+Shift+4 move container to workspace 24
+    bindsym Control+Shift+5 move container to workspace 25
+    bindsym Control+Shift+6 move container to workspace 26
+    bindsym Control+Shift+7 move container to workspace 27
+    bindsym Control+Shift+8 move container to workspace 28
+    bindsym Control+Shift+9 move container to workspace 29
+    bindsym Control+Shift+0 move container to workspace 30
 }
+
+mode "monitor4" {
+    # default_keys
+
+    bindsym Control+1 workspace 31
+    bindsym Control+2 workspace 32
+    bindsym Control+3 workspace 33
+    bindsym Control+4 workspace 34
+    bindsym Control+5 workspace 35
+    bindsym Control+6 workspace 36
+    bindsym Control+7 workspace 37
+    bindsym Control+8 workspace 38
+    bindsym Control+9 workspace 39
+    bindsym Control+0 workspace 40
+
+    # move focused container to workspace
+    bindsym Control+Shift+1 move container to workspace 31
+    bindsym Control+Shift+2 move container to workspace 32
+    bindsym Control+Shift+3 move container to workspace 33
+    bindsym Control+Shift+4 move container to workspace 34
+    bindsym Control+Shift+5 move container to workspace 35
+    bindsym Control+Shift+6 move container to workspace 36
+    bindsym Control+Shift+7 move container to workspace 37
+    bindsym Control+Shift+8 move container to workspace 38
+    bindsym Control+Shift+9 move container to workspace 39
+    bindsym Control+Shift+0 move container to workspace 40
+}
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
