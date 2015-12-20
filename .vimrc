@@ -1,21 +1,19 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/bundle')
 
-Bundle 'gmarik/vundle'
+Plug 'vim-scripts/slimv.vim'
+Plug 'vim-scripts/omlet.vim'
 
-Bundle 'vim-scripts/slimv.vim'
-Bundle 'vim-scripts/omlet.vim'
+Plug 'jimenezrick/vimerl'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'xevz/vim-sshauthkeys'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala'
 
-Bundle 'jimenezrick/vimerl'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'xevz/vim-sshauthkeys'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'derekwyatt/vim-scala'
+call plug#end()
 
 syntax on
 filetype plugin indent on
