@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/bundle')
 
 Plug 'vim-scripts/slimv.vim'
-Plug 'vim-scripts/omlet.vim'
+"Plug 'vim-scripts/omlet.vim'
 
 Plug 'jimenezrick/vimerl'
 Plug 'tpope/vim-fugitive'
@@ -12,6 +12,7 @@ Plug 'xevz/vim-sshauthkeys'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala'
+Plug 'godlygeek/tabular'
 
 call plug#end()
 
@@ -20,9 +21,10 @@ filetype plugin indent on
 
 set autoindent
 set cindent
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 set backspace=2
 
