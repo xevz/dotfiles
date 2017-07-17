@@ -44,5 +44,8 @@ which synclient &>/dev/null && synclient TouchpadOff=1
 
 start-stop-daemon --start --make-pidfile --background --pidfile $HOME/.i3/workspace.pid --exec $HOME/.i3/i3workspace.pl
 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 exec i3 | tee $HOME/.i3.log
 

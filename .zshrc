@@ -2,42 +2,6 @@
 # Functions
 #
 
-function _zshrc_ssh_agent_exit() {
-	ssh-agent -k > /dev/null 2>&1
-	rm -f "$SSH_ENV"
-}
-
-function _zshrc_ssh_agent_start() {
-	if ssh-agent | grep -v '^echo' > "$SSH_ENV"; then
-		chmod 600 $SSH_ENV
-		. "$SSH_ENV" > /dev/null 2>&1
-
-		if ssh-add > /dev/null 2>&1; then
-			return
-		fi
-	fi
-
-	_zshrc_ssh_agent_exit
-}
-
-function _zshrc_ssh_wrapper() {
-	cmd=$1; shift
-
-	if [ -r "$SSH_ENV" ]; then
-		. "$SSH_ENV" > /dev/null 2>&1
-		pgrep ssh-agent | grep -q $SSH_AGENT_PID || _zshrc_ssh_agent_start
-	else
-		_zshrc_ssh_agent_start
-	fi
-
-    (unfunction $cmd; $cmd $@)
-}
-
-function ssh  { _zshrc_ssh_wrapper $0 $@ }
-function scp  { _zshrc_ssh_wrapper $0 $@ }
-function sftp { _zshrc_ssh_wrapper $0 $@ }
-function mosh { _zshrc_ssh_wrapper $0 $@ }
-
 #
 # Environment variables
 #
@@ -138,10 +102,6 @@ case "$(uname)" in
 
 		;;
 esac
-
-if [ -r "$SSH_ENV" ]; then
-	source "$SSH_ENV"
-fi
 
 [ -r "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
