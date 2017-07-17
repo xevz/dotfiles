@@ -40,6 +40,7 @@ which pasystray &>/dev/null && pasystray &
 which redshift-gtk &>/dev/null && redshift-gtk -l 59.523816:17.885369 &
 which wicd-client &>/dev/null && wicd-client --tray &
 which xsettingsd &>/dev/null && xsettingsd &
+which synclient &>/dev/null && synclient TouchpadOff=1
 
 start-stop-daemon --start --make-pidfile --background --pidfile $HOME/.i3/workspace.pid --exec $HOME/.i3/i3workspace.pl
 
