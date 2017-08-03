@@ -49,6 +49,8 @@ set wildmode=list:longest,full
 
 set tags=tags;/
 
+set mouse=
+
 if has("folding")
 	set foldenable
 	set foldmethod=marker
