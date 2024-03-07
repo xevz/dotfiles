@@ -1,0 +1,51 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 30,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
+
+    "network": {
+      "format": "{icon}",
+      "format-alt": "{ipaddr} ({essid}) {icon}",
+      "format-alt-click": "click-right",
+      "format-icons": {
+        "wifi": ["", "" ,""],
+        "ethernet": [""],
+        "disconnected": [""]
+      },
+      "on-click": "nm-connection-editor",
+      "tooltip": true,
+      "tooltip-format": "{ipaddr} ({essid})",
+    },
+
+    "pulseaudio": {
+      "format": "{icon}",
+      "format-alt": "{volume}% {icon}",
+      "format-alt-click": "click-right",
+      "format-muted": "",
+      "format-icons": {
+        "phone": [" ", " ", " ", " "],
+        "default": ["", "", "", ""]
+      },
+      "scroll-step": 10,
+      "on-click": "pavucontrol",
+      "tooltip": true,
+      "tooltip-format": "{volume}%",
+    },
+
+    "battery": {
+      "format": "{capacity}% {icon}",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", ""],
+      "format-charging": "{capacity}% ",
+      "interval": 30,
+      "states": {
+        "warning": 25,
+        "critical": 10
+      },
+      "tooltip": true,
+    },
+}

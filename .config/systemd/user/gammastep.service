@@ -1,0 +1,9 @@
+[Unit]
+Description=Gammastep
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/gammastep -l 59.858576:17.638922
+
+[Install]
+WantedBy=graphical-session.target

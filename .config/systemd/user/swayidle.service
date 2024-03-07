@@ -1,0 +1,17 @@
+[Unit]
+Description=Swayidle
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+            timeout 300 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+            timeout 600 'swaylock -f -c 000000' \
+              resume 'swaymsg "output * dpms on"' \
+            timeout 900 '%h/bin/should-i-sleep' \
+              resume 'swaymsg "output * dpms on"' \
+            before-sleep 'swaylock -f -c 000000'
+
+[Install]
+WantedBy=graphical-session.target
