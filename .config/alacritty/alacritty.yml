@@ -1,0 +1,19 @@
+import:
+  - ~/.config/alacritty/nord.yml
+
+env:
+  TERM: xterm-256color
+
+window:
+  dynamic_title: true
+
+scrolling:
+  history: 10000
+
+cursor:
+  unfocused_hollow: true
+
+font:
+  normal:
+    family: terminal-font
+  size: 12
