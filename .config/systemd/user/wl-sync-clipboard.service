@@ -1,10 +1,10 @@
 [Unit]
 Description=Wayland Sync Clipboard
 PartOf=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
 Type=simple
-ConditionEnvironment=WAYLAND_DISPLAY
 ExecStart=/usr/bin/wl-paste --primary --watch /usr/bin/wl-copy
 
 [Install]

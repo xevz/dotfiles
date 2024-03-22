@@ -1,10 +1,10 @@
 [Unit]
 Description=Kanshi
 PartOf=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
 Type=simple
-ConditionEnvironment=WAYLAND_DISPLAY
 ExecStart=/usr/bin/kanshi
 
 [Install]
