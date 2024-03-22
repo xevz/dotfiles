@@ -58,8 +58,8 @@ bindsym Control+Shift+t exec x-terminal-emulator
 
 bindsym Control+shift+f exec x-www-browser
 
-bindsym Control+Shift+a exec pactl-all-sinks set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Control+Shift+o exec pactl-all-sinks set-sink-volume @DEFAULT_SINK@ -5%
+bindsym Control+Shift+a exec --no-startup-id sh -c 'pactl-all-sinks set-sink-mute @DEFAULT_SINK@ 0; pactl-all-sinks set-sink-volume @DEFAULT_SINK@ +5%'
+bindsym Control+Shift+o exec --no-startup-id sh -c 'pactl-all-sinks set-sink-mute @DEFAULT_SINK@ 0; pactl-all-sinks set-sink-volume @DEFAULT_SINK@ -5%'
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c 'pactl-all-sinks set-sink-mute @DEFAULT_SINK@ 0; pactl-all-sinks set-sink-volume @DEFAULT_SINK@ +5%'
 bindsym XF86AudioLowerVolume exec --no-startup-id sh -c 'pactl-all-sinks set-sink-mute @DEFAULT_SINK@ 0; pactl-all-sinks set-sink-volume @DEFAULT_SINK@ -5%'
