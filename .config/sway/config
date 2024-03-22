@@ -24,7 +24,7 @@ seat seat0 xcursor_theme default 24
 
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet
-exec blueman-tray
+exec blueman-applet
 exec keepassxc
 
 set $gnome-schema org.gnome.desktop.interface
