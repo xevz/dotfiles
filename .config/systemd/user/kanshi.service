@@ -1,0 +1,10 @@
+[Unit]
+Description=Kanshi
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanshi
+
+[Install]
+WantedBy=default.target

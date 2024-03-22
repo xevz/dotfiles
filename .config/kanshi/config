@@ -1,0 +1,9 @@
+profile docked@home {
+  output "Dell Inc. Dell U4919DW FNCZTY2" position 0,0
+
+  output eDP-1 position 1600,1440
+}
+
+profile default {
+  output eDP-1 position 0,0
+}
