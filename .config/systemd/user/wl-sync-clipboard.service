@@ -7,4 +7,4 @@ Type=simple
 ExecStart=/usr/bin/wl-paste --primary --watch /usr/bin/wl-copy
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=default.target

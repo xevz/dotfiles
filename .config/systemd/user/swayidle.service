@@ -14,4 +14,4 @@ ExecStart=/usr/bin/swayidle -w \
             before-sleep 'swaylock -f -c 000000'
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=default.target
