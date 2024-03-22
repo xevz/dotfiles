@@ -75,6 +75,7 @@ bindsym Shift+Mod4+p  exec --no-startup-id grimshot save output
 bindsym Print         exec --no-startup-id /bin/true
 bindsym Shift+Print   exec --no-startup-id /bin/true
 bindsym Control+Print exec --no-startup-id sh -c 'slurp -b 00000055 | grim -g - - | wl-copy --type image/png'
+bindsym Control+Shift+Print exec --no-startup-id sh -c 'slurp -b 00000055 | grim -g -'
 
 bindsym Mod4+l exec --no-startup-id swaylock -f -c 000000
 
