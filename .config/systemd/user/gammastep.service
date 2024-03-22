@@ -3,7 +3,7 @@ Description=Gammastep
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/gammastep -l 59.858576:17.638922
+ExecStart=/usr/bin/gammastep -l 59.523816:17.885369
 
 [Install]
 WantedBy=default.target
