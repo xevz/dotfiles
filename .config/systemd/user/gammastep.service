@@ -3,6 +3,7 @@ Description=Gammastep
 PartOf=graphical-session.target
 
 [Service]
+ConditionEnvironment=WAYLAND_DISPLAY
 ExecStart=/usr/bin/gammastep -l 59.523816:17.885369
 
 [Install]

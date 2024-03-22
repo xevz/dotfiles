@@ -4,6 +4,7 @@ PartOf=graphical-session.target
 
 [Service]
 Type=simple
+ConditionEnvironment=WAYLAND_DISPLAY
 ExecStart=/usr/bin/kanshi
 
 [Install]

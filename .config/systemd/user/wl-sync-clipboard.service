@@ -4,6 +4,7 @@ PartOf=graphical-session.target
 
 [Service]
 Type=simple
+ConditionEnvironment=WAYLAND_DISPLAY
 ExecStart=/usr/bin/wl-paste --primary --watch /usr/bin/wl-copy
 
 [Install]
